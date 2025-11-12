@@ -53,7 +53,7 @@
                                     <action selector="didTapResetButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZO1-dk-4gM"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTD-ko-QzJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTD-ko-QzJ">
                                 <rect key="frame" x="12" y="215.66666666666669" width="369" height="590.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
