@@ -8,8 +8,8 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var changeHistoryTextView: UITextView!
+    @IBOutlet private weak var countLabel: UILabel!
+    @IBOutlet private weak var changeHistoryTextView: UITextView!
     
     private var count: Int = 0 {
         willSet {
@@ -27,14 +27,14 @@ final class ViewController: UIViewController {
         changeHistoryTextView.text = "История изменений: \n"
     }
 
-    @IBAction func didTapIncrementButton() {
+    @IBAction private func didTapIncrementButton() {
         count += 1
         
         changeHistoryTextView.text += "[\(currentDateTime)]: значение изменено на +1 \n"
     }
     
-    @IBAction func didTapDecrementButton() {
-        if (count == 0) {
+    @IBAction private func didTapDecrementButton() {
+        if count == 0 {
             changeHistoryTextView.text += "[\(currentDateTime)]: попытка уменьшить значение счётчика ниже 0 \n"
             
             return
@@ -45,7 +45,7 @@ final class ViewController: UIViewController {
         changeHistoryTextView.text += "[\(currentDateTime)]: значение изменено на -1 \n"
     }
     
-    @IBAction func didTapResetButton() {
+    @IBAction private func didTapResetButton() {
         count = 0
         
         changeHistoryTextView.text += "[\(currentDateTime)]: значение сброшено \n"
